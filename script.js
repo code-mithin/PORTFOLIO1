@@ -111,7 +111,7 @@ const profile = {
 
   // ---- Certificates --------------------------------------------------------
   certificates: [
-    { title: 'Computer Fundamentals with MS Office', issuer: 'Local Institute', date: '2022', image: 'assets/certificates/MS Office.jpg', link: 'assets/certificates/MS Office.jpg' },
+    { title: 'Computer Fundamentals with MS Office', issuer: 'Local Institute', date: '2022', image: 'assets/certificates/MSoffice.jpg', link: 'assets/certificates/MSoffice.jpg' },
     { title: 'TALLY ERP9', issuer: 'Local Institute', date: '2024', image: 'assets/certificates/Tally erp9.jpg', link: 'assets/certificates/Tally erp9.jpg' },
     { title: 'DATABASE fundamentals', issuer: 'MongoDB', date: '2026', image: 'assets/certificates/MongoDB.jpg', link: 'assets/certificates/MongoDB.jpg' }
   ],
