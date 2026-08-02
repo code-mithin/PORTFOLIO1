@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#F7F9FC"/>
+  <rect x="14" y="14" width="572" height="372" rx="18" fill="none" stroke="#2E5CF6" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="10 10"/>
+  <circle cx="300" cy="165" r="42" fill="#2E5CF6" opacity="0.1"/>
+  <path d="M300 145 L300 185 M280 165 L320 165" stroke="#2E5CF6" stroke-width="6" stroke-linecap="round"/>
+  <text x="300" y="245" font-family="'Poppins', sans-serif" font-weight="600" font-size="22" fill="#0B1220" text-anchor="middle">More Projects</text>
+  <text x="300" y="272" font-family="'Poppins', sans-serif" font-weight="600" font-size="22" fill="#0B1220" text-anchor="middle">Coming Soon</text>
+  <text x="300" y="305" font-family="'JetBrains Mono', monospace" font-size="14" fill="#5B6478" text-anchor="middle">// currently building...</text>
+</svg>

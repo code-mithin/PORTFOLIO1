@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E5CF6"/>
+      <stop offset="100%" stop-color="#4FC3F7"/>
+    </linearGradient>
+    <linearGradient id="figGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background blob -->
+  <rect width="500" height="500" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="250" r="230" fill="#ffffff" opacity="0.05"/>
+  <circle cx="380" cy="120" r="90" fill="#ffffff" opacity="0.08"/>
+  <circle cx="90" cy="400" r="110" fill="#ffffff" opacity="0.06"/>
+
+  <!-- Abstract person silhouette -->
+  <circle cx="250" cy="195" r="78" fill="url(#figGrad)"/>
+  <path d="M 90 460 C 90 340 160 270 250 270 C 340 270 410 340 410 460 Z" fill="url(#figGrad)"/>
+
+  <!-- Decorative code brackets -->
+  <text x="60" y="90" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="34" fill="#ffffff" opacity="0.5">&lt;/&gt;</text>
+
+  <!-- Frame ring -->
+  <circle cx="250" cy="250" r="238" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="2"/>
+</svg>

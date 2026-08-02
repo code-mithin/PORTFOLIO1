@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2FA8"/>
+      <stop offset="100%" stop-color="#4FC3F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g2)"/>
+  <circle cx="70" cy="70" r="110" fill="#ffffff" opacity="0.06"/>
+  <circle cx="540" cy="340" r="130" fill="#ffffff" opacity="0.05"/>
+
+  <!-- calendar card -->
+  <g transform="translate(200,90)">
+    <rect x="0" y="10" width="200" height="220" rx="16" fill="#ffffff" opacity="0.97"/>
+    <rect x="0" y="10" width="200" height="46" rx="16" fill="#2E5CF6"/>
+    <rect x="0" y="40" width="200" height="16" fill="#2E5CF6"/>
+    <circle cx="40" cy="0" r="7" fill="#ffffff"/>
+    <circle cx="160" cy="0" r="7" fill="#ffffff"/>
+
+    <!-- checklist rows -->
+    <g font-family="'Inter', sans-serif">
+      <circle cx="28" cy="92" r="11" fill="#22C55E"/>
+      <path d="M23 92 L27 96 L34 87" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="50" y="86" width="120" height="10" rx="5" fill="#0B1220" opacity="0.15"/>
+
+      <circle cx="28" cy="128" r="11" fill="#22C55E"/>
+      <path d="M23 128 L27 132 L34 123" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="50" y="122" width="120" height="10" rx="5" fill="#0B1220" opacity="0.15"/>
+
+      <circle cx="28" cy="164" r="11" fill="#ffffff" stroke="#0B1220" stroke-opacity="0.2" stroke-width="2"/>
+      <rect x="50" y="158" width="120" height="10" rx="5" fill="#0B1220" opacity="0.15"/>
+
+      <circle cx="28" cy="200" r="11" fill="#EF4444" opacity="0.85"/>
+      <path d="M23 195 L33 205 M33 195 L23 205" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="50" y="194" width="120" height="10" rx="5" fill="#0B1220" opacity="0.15"/>
+    </g>
+  </g>
+
+  <text x="40" y="360" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="20" fill="#ffffff" opacity="0.55">// attendance-system</text>
+</svg>

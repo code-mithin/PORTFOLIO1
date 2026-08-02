@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO META TAGS
+       Update these to match your real name / bio when you edit
+       the `profile` object in script.js — this block stays static
+       because search engines and social crawlers read the raw HTML
+       before JavaScript runs.
+  ============================================================= -->
+  <title>Rohan Sharma | Computer Science Student &amp; Developer</title>
+  <meta name="description" content="Portfolio of Rohan Sharma — Computer Science student, Python &amp; web developer, and UI/UX enthusiast. Explore projects, skills, certificates and experience." />
+  <meta name="keywords" content="Rohan Sharma, portfolio, computer science student, python developer, web developer, ui ux designer, frontend developer" />
+  <meta name="author" content="Rohan Sharma" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2E5CF6" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rohan Sharma | Computer Science Student & Developer" />
+  <meta property="og:description" content="Portfolio of Rohan Sharma — Computer Science student, Python & web developer, and UI/UX enthusiast." />
+  <meta property="og:image" content="assets/images/profile.svg" />
+  <meta property="og:url" content="https://example.com" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rohan Sharma | Computer Science Student & Developer" />
+  <meta name="twitter:description" content="Portfolio of Rohan Sharma — Computer Science student, Python & web developer, and UI/UX enthusiast." />
+  <meta name="twitter:image" content="assets/images/profile.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts: Poppins (display), Inter (body), JetBrains Mono (code-style accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       PRELOADER — shown while the page first loads, hidden by
+       script.js once the window "load" event fires.
+  ============================================================= -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-mark">&lt;/&gt;</div>
+    <div class="preloader-bar"><span></span></div>
+  </div>
+
+  <!-- Custom cursor (desktop / fine-pointer devices only, see script.js) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================= -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo" id="navLogo" aria-label="Go to top">RS<span class="nav-logo-dot">.</span></a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+          <li><a href="#education" class="nav-link" data-nav="education">Education</a></li>
+          <li><a href="#certificates" class="nav-link" data-nav="certificates">Certificates</a></li>
+          <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+          <li><a href="#experience" class="nav-link" data-nav="experience">Experience</a></li>
+          <li><a href="#achievements" class="nav-link" data-nav="achievements">Achievements</a></li>
+          <li><a href="#hackathons" class="nav-link" data-nav="hackathons">Hackathons</a></li>
+          <li><a href="#timeline" class="nav-link" data-nav="timeline">Timeline</a></li>
+          <li><a href="#resume" class="nav-link" data-nav="resume">Resume</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HOME / HERO SECTION
+    ============================================================= -->
+    <section id="home" class="hero">
+      <canvas id="particlesCanvas" class="particles-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-container">
+        <div class="hero-text" data-reveal>
+          <p class="hero-eyebrow">// hello_world()</p>
+          <h1 class="hero-name" id="heroName"></h1>
+          <h2 class="hero-role">
+            <span class="hero-prompt">$</span>
+            <span id="typingText" class="typing-text"></span><span class="typing-cursor">_</span>
+          </h2>
+          <p class="hero-tagline" id="heroTagline"></p>
+
+          <div class="hero-buttons">
+            <a href="assets/resume.pdf" download class="btn btn-primary">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              <i class="fa-solid fa-diagram-project"></i> View Projects
+            </a>
+          </div>
+
+          <div class="hero-socials" id="heroSocials"></div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-glow"></div>
+            <img src="assets/images/profile.svg" alt="Profile photo" class="hero-photo" id="heroPhoto" width="440" height="440" />
+            <span class="hero-badge hero-badge-1"><i class="fa-brands fa-python"></i></span>
+            <span class="hero-badge hero-badge-2"><i class="fa-brands fa-js"></i></span>
+            <span class="hero-badge hero-badge-3"><i class="fa-solid fa-code"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span>Scroll</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+    ============================================================= -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// about</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">A quick introduction to who I am and what I do</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy" data-reveal id="aboutText"></div>
+
+          <div class="about-side" data-reveal>
+            <div class="about-interests">
+              <h3 class="about-side-title"><i class="fa-solid fa-star"></i> Interested In</h3>
+              <div class="interest-tags" id="aboutInterests"></div>
+            </div>
+            <div class="about-goal glass-card">
+              <i class="fa-solid fa-bullseye"></i>
+              <p id="aboutGoal"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid" id="aboutStats"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS SECTION
+    ============================================================= -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// skills</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">Tools and technologies I use to bring ideas to life</p>
+        </div>
+
+        <div class="skills-tabs" id="skillsTabs"></div>
+        <div class="skills-panels" id="skillsPanels"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EDUCATION SECTION
+    ============================================================= -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// education</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">My academic journey so far</p>
+        </div>
+
+        <div class="edu-timeline" id="educationTimeline"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CERTIFICATES SECTION
+    ============================================================= -->
+    <section id="certificates" class="section certificates-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// certificates</span>
+          <h2 class="section-title">Certificates</h2>
+          <p class="section-subtitle">Courses and programs I've completed</p>
+        </div>
+
+        <div class="certificates-grid" id="certificatesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS SECTION
+    ============================================================= -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// projects</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A selection of things I've built</p>
+        </div>
+
+        <div class="project-filters" id="projectFilters"></div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE SECTION
+    ============================================================= -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// experience</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Hands-on experience gained outside the classroom</p>
+        </div>
+
+        <div class="experience-grid" id="experienceGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ACHIEVEMENTS SECTION
+    ============================================================= -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// achievements</span>
+          <h2 class="section-title">Achievements</h2>
+          <p class="section-subtitle">Milestones from my learning journey, by the numbers</p>
+        </div>
+
+        <div class="counters-grid" id="achievementsCounters"></div>
+        <div class="achievements-grid" id="achievementsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HACKATHONS SECTION
+    ============================================================= -->
+    <section id="hackathons" class="section hackathons-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// hackathons</span>
+          <h2 class="section-title">Hackathons</h2>
+          <p class="section-subtitle">Building under pressure, with a team, against the clock</p>
+        </div>
+
+        <div class="hackathons-grid" id="hackathonsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TIMELINE SECTION (learning journey)
+    ============================================================= -->
+    <section id="timeline" class="section timeline-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// timeline</span>
+          <h2 class="section-title">My Learning Journey</h2>
+          <p class="section-subtitle">How I got here, one milestone at a time</p>
+        </div>
+
+        <div class="journey-timeline" id="journeyTimeline"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESUME SECTION
+    ============================================================= -->
+    <section id="resume" class="section resume-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// resume</span>
+          <h2 class="section-title">Resume</h2>
+          <p class="section-subtitle">A quick overview of my background — or download the full PDF</p>
+        </div>
+
+        <div class="resume-grid" data-reveal>
+          <div class="resume-preview glass-card">
+            <div class="resume-preview-icon"><i class="fa-solid fa-file-lines"></i></div>
+            <h3>Resume Preview</h3>
+            <p>Add your PDF at <code>assets/resume.pdf</code> and it will show up here and be downloadable from every "Download Resume" button on the site.</p>
+            <embed id="resumeEmbed" src="assets/resume.pdf" type="application/pdf" class="resume-embed" />
+          </div>
+
+          <div class="resume-cta">
+            <h3>Want the full picture?</h3>
+            <p id="resumeBlurb">Download my complete resume for a detailed look at my education, skills and project experience.</p>
+            <a href="assets/resume.pdf" download class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-download"></i> Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+    ============================================================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">// contact</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Have a project in mind or just want to say hi? My inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal id="contactInfo"></div>
+
+          <form class="contact-form glass-card" id="contactForm" data-reveal novalidate>
+            <div class="form-row">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" required />
+              <span class="form-error" id="errName"></span>
+            </div>
+            <div class="form-row">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required />
+              <span class="form-error" id="errEmail"></span>
+            </div>
+            <div class="form-row">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me a bit about what you have in mind..." required></textarea>
+              <span class="form-error" id="errMessage"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="contactSubmitBtn">
+              <i class="fa-solid fa-paper-plane"></i> <span>Send Message</span>
+            </button>
+            <p class="form-note">This form runs client-side only. Connect it to a service like Formspree, EmailJS, or your own backend to receive messages — see the comment above <code>initContactForm()</code> in script.js.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">RS<span class="nav-logo-dot">.</span></a>
+        <p id="footerTagline"></p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul id="footerQuickLinks"></ul>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Let's Connect</h4>
+        <div class="footer-social-icons" id="footerSocials"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footerCopyright"></p>
+      <button class="footer-top-btn" id="footerTopBtn">Back to top <i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ============================================================
+       PROJECT DETAILS MODAL
+  ============================================================= -->
+  <div class="modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close project details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <!-- Populated by script.js renderProjectModal() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification (used by the contact form) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
